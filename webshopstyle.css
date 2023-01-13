@@ -59,7 +59,7 @@ header a img{
 #cart{
     position: relative;
     width: 100%;
-    max-width: 100px;
+    max-width: 50px;
 
 }
 
@@ -79,24 +79,122 @@ header a img{
 
 }
 
-.label img{
-    max-width: 50px;
-}
+
 nav{
+    width: 100%;
     background-color: var(--red);
-    padding: 1rem;
-    margin-top: 1rem;
+    
+   /* margin-top: 1rem;*/
 }
 
 nav a{
     color: var(--white);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-bottom: 5px solid var(--red);
+    display: inline-block;
+    text-transform: uppercase;
+    transition: ease-in-out;
+
+}
+
+nav a:hover{
+    color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+/*Stil for valgt klasse*/
+nav a.active{
+    background-color: var(--yellow);
+    border-color: var(--black);
+    color: var(--black);
+
 }
 
 main{
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--white);
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+main h2{
+    flex-flow: 1;
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    /*justify-content: center;*/
+}
+
+article.product-card {
+    box-sizing: border-box;
+    background-color: var(--black);
+    border-bottom: 1rem solid var(--green);
+    width: 31%;
+    overflow: hidden;
+    padding: 1rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+article.product-card >*{
+    display: block;
+    clear: both;
+
+}
+
+article.product-card a{
+    color: var(--yellow);
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+
+article.product-card h3{
+    margin: 0.2rem 0 0.5rem 0;
+    text-transform: uppercase;
+
+}
+
+article.product-card button{
+    background-color: var(--green);
+    color: var(--white);
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+
+}
+
+.price {
+    padding: 0.2rem;
+}
+article.product-card img{
+    width: 100%;
+    
+}
+/*
+li{
+    list-style: none;
+}
+
+main ul li article{
+    background-color: var(--black);
+    max-width: 200px;
+    height: 300px;
+}
+
+main ul li article img{
+    max-width: 160px;
     padding: 1rem;
 }
 
+main article h3{
+    color: var(--white);
+}
+*/
 
 
 
