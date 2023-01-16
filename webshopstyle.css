@@ -28,7 +28,7 @@ body{
 
 div.container{
     width: 100%;
-    max-width: var(--mainwidth);
+    max-width: var(--maxwidth);
     margin: 0 auto;
     background-color: var(--white);
     overflow: hidden;
