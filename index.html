@@ -8,17 +8,32 @@
     <link href="webshopstyle.css" rel="stylesheet">
 </head>
 <body>
+
     <div class="container">
+
         <header>
             <!--klikkbar logo-->
             <a href="index.html"><img src="images/LD_logo.svg" alt="LEGO-DUDES"></a>
             <!--Samletag for handlevogn. bilde, teller(tekst) og lenke-->
-            <figure id="cart">
+            <figure id="cart" onClick="toggleCart()">
                 <!--Container for å telle antall i handlevogn-->
-                <span class="label">2</span>
+                <span class="label">0</span>
                 <img src="images/legocart.svg" alt="handlevogn">
             </figure>
         </header>
+
+        <section id="cartView" class="hidden">
+            <h3>Din handlevogn</h3>
+            <ul>
+                <li>
+                    Du har ingen varer i handlekurven
+                </li>
+           
+
+            </ul>
+            <p>Totalt kr. <span id="total">0,-</span></p>
+        </section>
+
         <nav>
             <a href="city.html">City</a>
             <a class="active" href="ninjago.html">Ninjago</a>
@@ -26,16 +41,19 @@
             <a href="marine-pirates.html">Marine and pirates</a>
             <a href="movie-characters.html">Movie characters</a>
         </nav>
+
         <main>
             <h2>Ninjago</h2>
+
             <article class="product-card">
                 <img src="images/PROD_dragon_zane.webp" alt="produktbilde av Zane">
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Dragon Zane</h3>
                 <span class="price">Kr 89,-</span>
-                <button>Legg i handlekurv</button>
+                <button onClick="addToCart('Dragon Zane', 89)">Legg i handlekurv</button>
 
             </article>
+
             <article class="product-card">
                 <img src="images/PROD_lil_ninja.webp" alt="produktbilde av Little Ninja">
                 <a href="ninjago.html">Ninjago</a>
