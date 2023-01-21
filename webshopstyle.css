@@ -82,7 +82,7 @@ header a img{
 
 #cartView{
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     background-color: var(--black);
     color: var(--white);
     position: absolute;
@@ -105,8 +105,12 @@ header a img{
     border-bottom: 1px solid var(--green);
     padding-bottom: .5rem;
     margin-bottom: .5rem;
-    display: block;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    /*display: block;*/
     clear: both;
+    transition: ease-in-out .7s;
 }
 
 #cartView ul li > * {
@@ -122,19 +126,25 @@ button.delete{
     background-color: var(--red);
     color: var(--white);
     border: none;
+    position: relative;
+    right: 1rem;
+    
 }
 
  span.title{
 
-    width: calc(100% - 9rem);
+    /*width: calc(100% - 9rem);*/
+    width: 2rem;
 
 
 }
 
 span.price, span.quantity{
-    width: 3rem;
+    width: 2rem;
 
 }
+
+
 
 nav{
     width: 100%;
@@ -168,6 +178,9 @@ nav a.active{
 
 }
 
+
+
+
 main{
     display: flex;
     flex-wrap: wrap;
@@ -184,6 +197,72 @@ main h2{
     text-transform: uppercase;
     /*justify-content: center;*/
 }
+
+
+
+
+.product-card article {
+    box-sizing: border-box;
+    background-color: var(--black);
+    border-bottom: 1rem solid var(--green);
+    width: 29%;
+    overflow: hidden;
+    padding: 1rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+main ul li{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+main ul{
+    margin: 0;
+    padding: 0;
+}
+li.product-card >*{
+    display: block;
+    clear: both;
+    margin: 1rem;
+
+
+}
+
+.product-card article img{
+    max-width: 100%;
+}
+
+.product-card article a{
+    color: var(--yellow);
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+
+.product-card article h3{
+    margin: 0.2rem 0 0.5rem 0;
+    text-transform: uppercase;
+
+}
+
+li.product-card article button{
+    background-color: var(--green);
+    color: var(--white);
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+
+}
+
+
+
+
+
+
 
 article.product-card {
     box-sizing: border-box;

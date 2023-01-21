@@ -1,55 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEGO-DUDES WEBSHOP</title>
-    <link href="webshopstyle.css" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LEGO-DUDES WEBSHOP</title>
+        <link href="webshopstyle.css" rel="stylesheet">
+    </head>
+    <body>
 
-    <div class="container">
+        <div class="container">
 
-        <header>
-            <!--klikkbar logo-->
-            <a href="index.html"><img src="images/LD_logo.svg" alt="LEGO-DUDES"></a>
-            <!--Samletag for handlevogn. bilde, teller(tekst) og lenke-->
-            <figure id="cart" onClick="toggleCart()">
-                <!--Container for å telle antall i handlevogn-->
-                <span class="label">0</span>
-                <img src="images/legocart.svg" alt="handlevogn">
-            </figure>
-        </header>
+            <header>
+                <!--klikkbar logo-->
+                <a href="index.html"><img src="images/LD_logo.svg" alt="LEGO-DUDES"></a>
+                <!--Samletag for handlevogn. bilde, teller(tekst) og lenke-->
+                <figure id="cart" onClick="toggleCart()">
+                    <!--Container for å telle antall i handlevogn-->
+                    <span class="label">0</span>
+                    <img src="images/legocart.svg" alt="handlevogn">
+                </figure>
+            </header>
 
-        <section id="cartView" class="hidden">
-            <h3>Din handlevogn</h3>
-            <ul>
-                <li>
-                    Du har ingen varer i handlekurven
-                </li>
-           
+            <section id="cartView" class="hidden">
+                <h3>Din handlevogn</h3>
+                <ul>
+                    <li id="item">
+                        Du har ingen varer i handlekurven
+                    </li>
+                </ul>
+                <p>Totalt kr. <span id="total">0</span>,-</p>
+            </section>
 
-            </ul>
-            <p>Totalt kr. <span id="total">0,-</span></p>
-        </section>
+            <nav>
+                <a href="city.html">City</a>
+                <a class="active" href="ninjago.html">Ninjago</a>
+                <a href="castle-knights.html">Castles and knights</a>
+                <a href="marine-pirates.html">Marine and pirates</a>
+                <a href="movie-characters.html">Movie characters</a>
+            </nav>
 
-        <nav>
-            <a href="city.html">City</a>
-            <a class="active" href="ninjago.html">Ninjago</a>
-            <a href="castle-knights.html">Castles and knights</a>
-            <a href="marine-pirates.html">Marine and pirates</a>
-            <a href="movie-characters.html">Movie characters</a>
-        </nav>
+            <main>
+                <h2>Ninjago</h2>
+                <ul>
+                    <li class="product-card">
+                
+                        
+                    </li>
+                </ul>
 
-        <main>
-            <h2>Ninjago</h2>
+               <!--<article class="product-card">-->
+                    <!--<img src="images/PROD_dragon_zane.webp" alt="produktbilde av Zane">
+                    <a href="ninjago.html">Ninjago</a>
+                    <h3 class="title"></h3>
+                    <span class="price"></span>-->
 
+                </article>
+<!---
             <article class="product-card">
                 <img src="images/PROD_dragon_zane.webp" alt="produktbilde av Zane">
                 <a href="ninjago.html">Ninjago</a>
-                <h3>Dragon Zane</h3>
-                <span class="price">Kr 89,-</span>
+                <h3 class="title">Dragon Zane</h3>-->
+                <!--<h3 class="title"></h3>-->
+    <!---         <span class="price">Kr 89,-</span>
                 <button onClick="addToCart('Dragon Zane', 89)">Legg i handlekurv</button>
 
             </article>
@@ -59,7 +72,7 @@
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Little Ninja</h3>
                 <span class="price">Kr 89,-</span>
-                <button>Legg i handlekurv</button>
+                <button onClick="addToCart('Little Ninja', 89)">Legg i handlekurv</button>
 
             </article>
             <article class="product-card">
@@ -67,7 +80,7 @@
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Master Wu</h3>
                 <span class="price">Kr 112,-</span>
-                <button>Legg i handlekurv</button>
+                <button onClick="addToCart('Master Wu', 112)">Legg i handlekurv</button>
 
             </article>
             <article class="product-card">
@@ -75,9 +88,9 @@
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Scuba Kai</h3>
                 <span class="price">Kr 110,-</span>
-                <button>Legg i handlekurv</button>
+                <button onClick="addToCart('Scuba Kai', 110)">Legg i handlekurv</button>
 
-            </article>
+            </article>-->
             
            
            
@@ -93,9 +106,11 @@
                     </li>
                 </ul>
             </section>-->
-        </main>
+            </main>
       
-    </div>
-    <script src="shopscript.js"></script>
-</body>
+         </div>
+
+         <script src="shopscript.js"></script>
+        <script src="productStore.js"></script>
+    </body>
 </html>
