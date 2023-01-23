@@ -8,8 +8,8 @@ let cartViewState = true;
 function deleteProduct(index){
 //undøvendig med if siden vi ser om det er noe her
 
-//document.getElementById("prod-" + index).classList.add("hidden");
-//setTimeout( () => {cart.splice(index, 1) renderCart()}, 700)
+  document.getElementById("prod-" + index).classList.add("hidden");
+  setTimeout( () => {cart.splice(index, 1).renderCart()}, 700)
    if(index > -1){
         cart.splice(index, 1);
     }
@@ -53,6 +53,10 @@ function calculatePrice(e){
 
 
 function renderCart(){
+
+    /*if(!document.querySelector("#cartView").classList.contains("hidden")) {
+        document.querySelector("#cartView").classList.add("hidden")
+    }*/
     //bygge HTML til produkter
     let listHTML = "";
 
@@ -76,11 +80,13 @@ function renderCart(){
         }
     );
 
+    toggleCart();
 
      document.querySelector("#cartView ul").innerHTML = listHTML;
      document.querySelector("#total").innerHTML = sum;
 
      //calculatePrice();
+     
      
 }
 
